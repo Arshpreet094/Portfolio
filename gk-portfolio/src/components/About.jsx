@@ -12,7 +12,6 @@ export default function About() {
   const infoRef = useReveal('sr-l', 180)
   const bioRef  = useReveal('sr-r', 100)
   const eduRef  = useReveal('sr-r', 180)
-  const softRef = useReveal('sr', 280)
 
   return (
     <section id="about" className="py-24 md:py-32">
@@ -103,18 +102,7 @@ export default function About() {
             </div>
 
             {/* Soft skills */}
-            <div ref={softRef} className="sr">
-              <h3 className="font-serif italic font-bold text-xl text-[#F0EBE3] mb-4">Soft Skills</h3>
-              <div className="flex flex-wrap gap-2.5">
-                {['Problem-Solving','Team Collaboration','Fast Learner','Attention to Detail'].map(s=>(
-                  <span key={s} className="text-sm font-medium px-4 py-2 rounded-lg border border-white/[0.09]
-                    text-[#8A8178] hover:text-[#F0EBE3] hover:border-[#C8A84B]/30 hover:bg-[#C8A84B]/[0.05]
-                    bg-white/[0.03] transition-all duration-200 cursor-default">
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>

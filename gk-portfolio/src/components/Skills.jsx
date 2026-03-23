@@ -16,6 +16,7 @@ const CERTS = [
 
 function SkillCard({ g, delay }) {
   const ref = useReveal('sr-sc', delay)
+
   return (
     <div ref={ref} className={`sr-sc border border-white/[0.08] rounded-2xl p-6 md:p-7 bg-[#1A1A1A]
       hover:border-white/[0.16] hover:-translate-y-1 transition-all duration-300 ${g.wide ? 'md:col-span-2' : ''}`}>
@@ -58,6 +59,8 @@ function CertCard({ c, delay }) {
 
 export default function Skills() {
   const hRef = useReveal('sr', 0)
+  const softRef = useReveal('sr', 280)
+
   return (
     <section id="skills" className="py-24 md:py-32 bg-[#111111]">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
@@ -81,6 +84,20 @@ export default function Skills() {
             {CERTS.map((c, i) => <CertCard key={c.name} c={c} delay={300 + i * 80} />)}
           </div>
         </div>
+        <div ref={softRef} className="sr">
+              <br>
+              </br>
+              <h3 className="font-serif italic font-bold text-xl text-[#F0EBE3] mb-4">Soft Skills</h3>
+              <div className="flex flex-wrap gap-2.5">
+                {['Problem-Solving','Team Collaboration','Fast Learner','Attention to Detail'].map(s=>(
+                  <span key={s} className="text-sm font-medium px-4 py-2 rounded-lg border border-white/[0.09]
+                    text-[#8A8178] hover:text-[#F0EBE3] hover:border-[#C8A84B]/30 hover:bg-[#C8A84B]/[0.05]
+                    bg-white/[0.03] transition-all duration-200 cursor-default">
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
       </div>
     </section>
   )
