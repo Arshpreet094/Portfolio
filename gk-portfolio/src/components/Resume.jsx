@@ -101,7 +101,7 @@ export default function Resume() {
               </div>
 
               <div>
-                <h3 className="font-serif italic font-bold text-2xl text-[#F0EBE3] mb-2">Gaurav Kumar</h3>
+                <h3 className="font-serif italic font-bold text-2xl text-[#F0EBE3] mb-2">Arshpreet Singh</h3>
                 <p className="text-[#8A8178] text-sm font-mono">B.Tech CSE · LPU · 2023</p>
               </div>
 
@@ -130,9 +130,7 @@ export default function Resume() {
               </div>
 
               <p className="text-[#5A554F] text-xs font-mono leading-relaxed">
-                Place your CV at<br />
-                <span className="text-[#C8A84B]">public/Arshpreet_Singh_Resume.pdf</span><br />
-                to enable the download button
+                
               </p>
             </div>
           </div>

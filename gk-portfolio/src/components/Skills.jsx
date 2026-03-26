@@ -1,9 +1,18 @@
 import { useReveal } from '../hooks/useReveal'
 
+const SOFT_SKILLS = [
+  'Problem-Solving Skills',
+  'Team Collaboration',
+  'Fast Learner',
+  'Self Motivated',
+  'Adaptability'
+]
+
 const GROUPS = [
   { id:'lang',  title:'Languages',    items:['C++','Java','SQL','Python','HTML','CSS','Javascript','C','React'],                          dot:'#F59E0B' },
   { id:'DS',    title:'Data Science and ML',     items:['MS Excel','Power BI','Numpy','Pandas','Matplotlib','Seaborn','SkiKit-Learn'], dot:'#38BDF8' },
   { id:'tools', title:'Tools & DevOps', items:['Git','GitHub','MS Excel','Power BI','CI/CD Pipelines'], dot:'#FB7185', wide:true },
+  
 ]
 const CERTS = [
   { name:'Cloud Computing', org:'NPTEL', date:'Nov 2025', dot:'#38BDF8' },
@@ -85,6 +94,27 @@ export default function Skills() {
             {CERTS.map((c, i) => <CertCard key={c.name} c={c} delay={300 + i * 80} />)}
           </div>
         </div>
+        <div>
+  <p className="font-mono text-[#C8A84B] text-xs tracking-[0.14em] uppercase mb-4 mt-8">
+    Soft Skills
+  </p>
+
+  <div className="flex flex-wrap gap-3">
+    {SOFT_SKILLS.map((skill) => (
+      <span
+        key={skill}
+        className="inline-block font-mono text-sm px-4 py-2 rounded-lg
+        bg-white/[0.04] border border-white/[0.07] text-[#8A8178]
+        hover:text-[#F0EBE3] hover:border-white/[0.15] hover:bg-white/[0.07]
+        transition-all duration-200 cursor-default"
+      >
+        {skill}
+      </span>
+    ))}
+  </div>
+</div>
+
+        
         
       </div>
     </section>
