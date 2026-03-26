@@ -46,7 +46,7 @@ export default function Navbar() {
       }`}>
         <nav className="max-w-[1200px] mx-auto px-6 lg:px-10 flex items-center justify-between py-4">
           <button onClick={() => scrollTo('hero')} className="flex items-center gap-2 group">
-            <span className="font-serif italic text-xl font-bold text-[#F0EBE3]">GK</span>
+            <span className="font-serif italic text-xl font-bold text-[#F0EBE3]">AP</span>
             <span className="w-1.5 h-1.5 rounded-full bg-[#C8A84B] group-hover:scale-125 transition-transform" />
           </button>
 

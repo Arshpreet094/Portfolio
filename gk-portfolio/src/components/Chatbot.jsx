@@ -12,19 +12,19 @@ import { useState, useRef, useEffect } from 'react'
 // ────────────────────────────────────────────────────────────────────────────────
 const API_KEY = import.meta.env.VITE_ANTHROPIC_API_KEY || ''
 
-const SYSTEM = `You are GK Assistant, a friendly AI chatbot on Gaurav Kumar's portfolio. Answer questions about him concisely and professionally.
+const SYSTEM = `You are AP Assistant, a friendly AI chatbot on Arshpreet's portfolio. Answer questions about him concisely and professionally.
 
-ABOUT GAURAV KUMAR:
-- Email: gauravkumar170303@gmail.com | Phone: +91-7319814361
-- GitHub: https://github.com/GauravKumar17
-- LinkedIn: https://www.linkedin.com/in/gauravkumar170303
+ABOUT ARSHPREET:
+- Email: singharshpreet9460@gmail.com | Phone: +91-7319814361
+- GitHub: https://github.com/Arshpreet094
+- LinkedIn: https://www.linkedin.com/in/arshpreet094
 
 EDUCATION:
-- B.Tech CSE, LPU Phagwara — CGPA 8.15 (Aug 2023–present)
-- Class XII, Pitts Modern School Ranchi — 83% (2019–2021)
-- Class X, Pitts Modern School Ranchi — 92.4% (2018–2019)
+- B.Tech CSE, LPU Phagwara — CGPA 9.29 (Aug 2023–present)
+- Class XII, Sri Guru Harkrishan Public School Pathankot — 93.4% (2021–2023)
+- Class X, Sri Guru Harkrishan Public School Pathankot — 93% (2020–2021)
 
-SKILLS: C++, JavaScript, TypeScript, Python, Kotlin, C, React.js, Next.js, HTML5, CSS3, Tailwind CSS, Jetpack Compose, Node.js, Express.js, WebSockets, REST APIs, WebRTC, PostgreSQL, MongoDB, Prisma ORM, Redis, Git, Docker, Turborepo, CI/CD, Postman, Clerk Auth
+SKILLS: C++, JavaScript, Python, Machine Learning,C, React.js, HTML5, CSS3, Prisma ORM, Redis, Git, Docker, Turborepo, CI/CD, Postman, Clerk Auth
 
 PROJECTS:
 1. VAARTA (Sep–Nov 2025) — PERN chat app, Socket.io real-time + WebRTC video, Google Gemini AI chatbot, Cloudinary, TypeScript + Express backend
@@ -37,7 +37,7 @@ AVAILABILITY: Actively seeking internships and campus placements. Open to freela
 Keep answers to 2–4 sentences. Be warm and professional. If unsure, say so honestly.`
 
 const QUICK = [
-  'What projects has Gaurav built?',
+  'What projects has Arshpreet built?',
   'What are his skills?',
   'Is he open to internships?',
 ]
@@ -60,7 +60,7 @@ function Bubble({ m }) {
       {!isUser && (
         <div className="w-7 h-7 rounded-full bg-[#C8A84B]/15 border border-[#C8A84B]/30
           flex items-center justify-center flex-shrink-0 mt-0.5">
-          <span className="font-serif italic text-[9px] font-bold text-[#C8A84B]">GK</span>
+          <span className="font-serif italic text-[9px] font-bold text-[#C8A84B]">AP</span>
         </div>
       )}
       <div className={`max-w-[82%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed whitespace-pre-wrap ${
@@ -78,7 +78,7 @@ export default function Chatbot() {
   const [open, setOpen]     = useState(false)
   const [msgs, setMsgs]     = useState([{
     role: 'assistant',
-    content: "Hi! I'm GK Assistant 👋 Ask me anything about Gaurav — his projects, skills, experience, or how to reach him."
+    content: "Hi! I'm AP Assistant 👋 Ask me anything about Arshpreet — his projects, skills, experience, or how to reach him."
   }])
   const [input, setInput]   = useState('')
   const [loading, setLoading] = useState(false)
@@ -147,7 +147,7 @@ export default function Chatbot() {
       {/* FAB */}
       <button
         onClick={() => setOpen(o => !o)}
-        aria-label="Open GK Assistant"
+        aria-label="Open AP Assistant"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full
           bg-[#C8A84B] hover:bg-[#A88730] shadow-xl shadow-[#C8A84B]/30
           flex items-center justify-center
@@ -174,8 +174,8 @@ export default function Chatbot() {
               <span className="font-serif italic font-bold text-sm text-[#C8A84B]">GK</span>
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-[#F0EBE3] text-sm font-semibold">GK Assistant</p>
-              <p className="text-green-400 text-xs font-mono">● Online · Knows everything about Gaurav</p>
+              <p className="text-[#F0EBE3] text-sm font-semibold">AP Assistant</p>
+              <p className="text-green-400 text-xs font-mono">● Online · Knows everything about Arshpreet</p>
             </div>
             <button onClick={() => setOpen(false)} className="text-[#5A554F] hover:text-[#F0EBE3] transition-colors p-1">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
@@ -188,7 +188,7 @@ export default function Chatbot() {
             {loading && (
               <div className="flex gap-2 justify-start">
                 <div className="w-7 h-7 rounded-full bg-[#C8A84B]/15 border border-[#C8A84B]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="font-serif italic text-[9px] font-bold text-[#C8A84B]">GK</span>
+                  <span className="font-serif italic text-[9px] font-bold text-[#C8A84B]">AP</span>
                 </div>
                 <div className="bg-[#1A1A1A] border border-white/[0.08] rounded-2xl rounded-bl-sm"><TypingDots /></div>
               </div>

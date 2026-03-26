@@ -2,12 +2,12 @@ import { useReveal } from '../hooks/useReveal'
 
 // Put your CV PDF at: public/Gaurav_Kumar_general_cvn.pdf
 // It will be served as a static file automatically by Vite / any host
-const CV_FILE = 'https://drive.google.com/uc?export=download&id=18cMMThaNpA6NtXj6UbK0mk3DbD14DnOC'
+const CV_FILE = 'https://drive.google.com/uc?export=download&id=16wdvvd3-HnHis0FIsEzkE_QzAt_epJ5a'
 
 const HIGHLIGHTS = [
-  { icon: '🎓', label: 'Education',      val: 'B.Tech CSE · LPU · 8.34 CGPA' },
-  { icon: '💻', label: 'Key Skills',     val: 'TypeScript · React · Node.js · PostgreSQL · React Native' },
-  { icon: '🚀', label: 'Projects',       val: 'VAARTA · TrackExpense · BrainX' },
+  { icon: '🎓', label: 'Education',      val: 'B.Tech CSE · LPU · 9.23 CGPA' },
+  { icon: '💻', label: 'Key Skills',     val: 'C++ · Python · Machine Learning · PowerBI · Data Science' },
+  { icon: '🚀', label: 'Projects',       val: 'Weather Prediction System · Job Market Trends DashBoard · BrainX' },
   { icon: '🏅', label: 'Certifications', val: 'NPTEL Cloud Computing · Udemy DS/ML Bootcamp' },
 ]
 
@@ -60,19 +60,29 @@ export default function Resume() {
                 <p className="font-mono text-[#5A554F] text-xs tracking-widest uppercase">Contact Details</p>
               </div>
               {[
-                { k: 'Email',    v: 'gauravkumar170303@gmail.com', href: 'mailto:gauravkumar170303@gmail.com' },
-                { k: 'Mobile',   v: '+91 7319814361' },
-                { k: 'GitHub',   v: 'github.com/GauravKumar17',  href: 'https://github.com/GauravKumar17' },
-                { k: 'LinkedIn', v: 'in/gauravkumar170303',       href: 'https://www.linkedin.com/in/gauravkumar170303' },
-              ].map(r => (
-                <div key={r.k} className="flex justify-between items-center gap-3 px-5 py-3.5 border-b border-white/[0.06] last:border-0 flex-wrap">
-                  <span className="font-mono text-[#5A554F] text-xs uppercase tracking-widest flex-shrink-0">{r.k}</span>
-                  {r.href
-                    ? <a href={r.href} target={r.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer"
-                        className="text-[#C8A84B] text-sm hover:opacity-75 transition-opacity">{r.v}</a>
-                    : <span className="text-[#F0EBE3] text-sm">{r.v}</span>
-                  }
-                </div>
+    { label: 'Email', val: 'singharshpreet9460@gmail.com', href: 'mailto:singharshpreet9460@gmail.com' },
+    { label: 'LinkedIn', val: 'in/Arshpreet094', href: 'https://www.linkedin.com/in/Arshpreet094' },
+    { label: 'GitHub', val: 'Arshpreet094', href: 'https://github.com/arshpreet094' },
+    { label: 'Phone', val: '+91 7508353653', href: 'tel:+917508353653' },
+  ].map((r, index) => (
+    <div key={index} className="flex justify-between items-center gap-3 px-5 py-3.5 border-b border-white/[0.06] last:border-0 flex-wrap">
+      <span className="font-mono text-[#5A554F] text-xs uppercase tracking-widest flex-shrink-0">
+        {r.label}
+      </span>
+
+      {r.href ? (
+        <a
+          href={r.href}
+          target={r.href.startsWith('http') ? '_blank' : undefined}
+          rel="noreferrer"
+          className="text-[#C8A84B] text-sm hover:opacity-75 transition-opacity"
+        >
+          {r.val}
+        </a>
+      ) : (
+        <span className="text-[#F0EBE3] text-sm">{r.val}</span>
+      )}
+    </div>
               ))}
             </div>
           </div>
@@ -99,7 +109,7 @@ export default function Resume() {
                 {/* Direct static file download — no server needed */}
                 <a
                   href={CV_FILE}
-                  download="Gaurav_Kumar_Resume.pdf"
+                  download="Arshpreet_Singh_Resume.pdf"
                   className="w-full flex items-center justify-center gap-3 bg-[#C8A84B] hover:bg-[#A88730]
                     text-[#0A0A0A] font-bold text-sm tracking-wide py-4 rounded-xl
                     transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#C8A84B]/20">
@@ -111,7 +121,7 @@ export default function Resume() {
                   Download CV (PDF)
                 </a>
 
-                <a href="https://www.linkedin.com/in/gauravkumar170303" target="_blank" rel="noreferrer"
+                <a href="https://www.linkedin.com/in/arshpreet094" target="_blank" rel="noreferrer"
                   className="w-full flex items-center justify-center gap-3 border border-white/[0.1]
                     hover:border-[#C8A84B]/30 text-[#8A8178] hover:text-[#C8A84B] font-semibold text-sm
                     py-3.5 rounded-xl transition-all duration-200 hover:-translate-y-0.5">
@@ -121,7 +131,7 @@ export default function Resume() {
 
               <p className="text-[#5A554F] text-xs font-mono leading-relaxed">
                 Place your CV at<br />
-                <span className="text-[#C8A84B]">public/Gaurav_Kumar_Resume.pdf</span><br />
+                <span className="text-[#C8A84B]">public/Arshpreet_Singh_Resume.pdf</span><br />
                 to enable the download button
               </p>
             </div>

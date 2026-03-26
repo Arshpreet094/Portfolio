@@ -1,7 +1,6 @@
 const ITEMS = [
-  'React.js','TypeScript','Node.js','PostgreSQL','Socket.io','React Native',
-  'Next.js','Express.js','MongoDB','Prisma ORM','Tailwind CSS','WebRTC',
-  'Kotlin','Docker','Git','Redis','Gemini API','Clerk Auth','Turborepo','CI/CD',
+  'C++','Python','Machine Learning','SQL','Java','HTML','MongoDB','Tailwind CSS',
+  'JavaScript','Power BI','Git','Gemini API',
 ]
 const doubled = [...ITEMS, ...ITEMS]
 

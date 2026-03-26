@@ -1,9 +1,9 @@
 import { useReveal } from '../hooks/useReveal'
 
 const EDU = [
-  { degree:'B.Tech — Computer Science & Engineering', school:'Lovely Professional University', loc:'Phagwara, Punjab', period:'Aug 2023 – Present', score:'8.34 CGPA', icon:'🎓', highlight:true },
-  { degree:'Intermediate (Class XII)', school:'Pitts Modern School', loc:'Ranchi, Jharkhand', period:'2019 – 2021', score:'84.8%', icon:'📘', highlight:false },
-  { degree:'Matriculation (Class X)', school:'Pitts Modern School', loc:'Ranchi, Jharkhand', period:'2018 – 2019', score:'92.4%', icon:'📗', highlight:false },
+  { degree:'B.Tech — Computer Science & Engineering', school:'Lovely Professional University', loc:'Phagwara, Punjab', period:'Aug 2023 – Present', score:'9.29 CGPA', icon:'🎓', highlight:true },
+  { degree:'Intermediate (Class XII)', school:'Sri Guru Harkrishan Public School', loc:'Pathankot, Punjab', period:'2022 – 2023', score:'93.4%', icon:'📘', highlight:false },
+  { degree:'Matriculation (Class X)', school:'Sri Guru Harkrishan Public School', loc:'Pathankot, Punjab', period:'2020 – 2021', score:'93%', icon:'📗', highlight:false },
 ]
 
 export default function About() {
@@ -41,11 +41,11 @@ export default function About() {
 
             <div ref={infoRef} className="sr-l border border-white/[0.08] rounded-2xl overflow-hidden">
               {[
-                { k:'Email',    v:'gauravkumar170303@gmail.com', href:'mailto:gauravkumar170303@gmail.com' },
-                { k:'Phone',    v:'+91 7319814361' },
+                { k:'Email',    v:'singharshpreet9460@gmail.com', href:'mailto:singharshpreet9460@gmail.com' },
+                { k:'Phone',    v:'+91 7508353653' },
                 { k:'Location', v:'Phagwara, Punjab' },
-                { k:'GitHub',   v:'GauravKumar17',          href:'https://github.com/GauravKumar17' },
-                { k:'LinkedIn', v:'in/gauravkumar170303',   href:'https://www.linkedin.com/in/gauravkumar170303' },
+                { k:'GitHub',   v:'Arshpreet094',          href:'https://github.com/Arshpreet094' },
+                { k:'LinkedIn', v:'in/arshpreet094',   href:'https://www.linkedin.com/in/arshpreet094' },
               ].map(r=>(
                 <div key={r.k} className="flex justify-between items-center gap-2 px-4 py-3 border-b border-white/[0.06] last:border-0 flex-wrap">
                   <span className="font-mono text-[#5A554F] text-xs tracking-widest uppercase flex-shrink-0">{r.k}</span>
@@ -65,12 +65,13 @@ export default function About() {
               <p className="font-serif italic text-xl md:text-2xl text-[#F0EBE3] leading-relaxed">
                 "I build production-ready applications — not just demos — while studying full-time for my B.Tech at LPU."
               </p>
-              <p className="text-[#8A8178] text-sm font-mono mt-3">— Gaurav Kumar, CSE '27</p>
+              <p className="text-[#8A8178] text-sm font-mono mt-3">— Arshpreet Singh, CSE '27</p>
             </div>
 
             <p className="text-[#8A8178] text-base md:text-lg leading-relaxed">
-              I'm a self-taught developer who went from YouTube tutorials to shipping full-stack apps with WebRTC video conferencing, React Native mobile apps with 60fps animations, and AI-powered content platforms with Three.js 3D visualisations — all while maintaining an 8.34 CGPA. I move fast, care deeply about code quality, and always ship.
-            </p>
+Enthusiastic and dedicated 3rd year Computer Science Engineering student specializing in Data 
+Science. Strong foundation in Python, data analysis, and machine learning with hands-on 
+experience in academic projects involving data preprocessing and visualization.             </p>
 
             {/* Education */}
             <div ref={eduRef} className="sr-r">

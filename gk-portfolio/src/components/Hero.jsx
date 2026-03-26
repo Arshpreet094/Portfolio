@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useReveal } from '../hooks/useReveal'
 
-const ROLES = ['FullStack Developer', 'Mobile App Dev', 'AI Integrator', 'Backend Engineer']
+const ROLES = ['Data Scientist', 'ML Engineer', 'AI Integrator', 'Software Engineer']
 
 function Typewriter() {
   const [idx, setIdx] = useState(0)
@@ -99,7 +99,7 @@ export default function Hero() {
           <span className="inline-flex items-center gap-2 border border-[#C8A84B]/30 bg-[#C8A84B]/[0.07]
             text-[#C8A84B] text-xs font-mono tracking-[0.14em] uppercase px-4 py-1.5 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-[#C8A84B] animate-pulse" />
-            B.Tech CSE · LPU · 8.34 CGPA
+            B.Tech CSE · LPU · 9.3 CGPA
           </span>
           <span className="hidden md:block text-[#5A554F] text-xs font-mono tracking-widest">
             Available for Opportunities
@@ -114,12 +114,12 @@ export default function Hero() {
             <h1 ref={n1Ref}
               className="sr font-serif italic font-bold leading-[0.9] tracking-tighter
                 text-[clamp(4.5rem,13vw,11rem)] text-[#F0EBE3]">
-              Gaurav
+              Arshpreet
             </h1>
             <h1 ref={n2Ref}
               className="sr sd1 font-serif italic font-bold leading-[0.9] tracking-tighter
                 text-[clamp(4.5rem,13vw,11rem)] gold-text">
-              Kumar
+              Singh
             </h1>
           </div>
 
@@ -163,7 +163,7 @@ export default function Hero() {
           </div>
           <Typewriter />
           <p ref={bioMobile} className="sr text-[#8A8178] text-base md:text-lg leading-relaxed max-w-lg">
-            Building real-time apps, mobile products &amp; AI-powered tools while studying full-time at LPU.
+            Passionate about solving real-world problems using data-driven approaches and continuously learning emerging technologies. .
           </p>
         </div>
 
@@ -186,8 +186,8 @@ export default function Hero() {
           </button>
           <div className="flex items-center gap-5 ml-1">
             {[
-              { l: 'GitHub',   h: 'https://github.com/GauravKumar17' },
-              { l: 'LinkedIn', h: 'https://www.linkedin.com/in/gauravkumar170303' },
+              { l: 'GitHub',   h: 'https://github.com/Arshpreet094' },
+              { l: 'LinkedIn', h: 'https://linkedin.com/in/arshpreet094 ' },
             ].map(s => (
               <a key={s.l} href={s.h} target="_blank" rel="noreferrer"
                 className="text-[#8A8178] hover:text-[#C8A84B] text-sm font-medium transition-colors
@@ -205,7 +205,7 @@ export default function Hero() {
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/[0.07]">
             {[
               { n: '3',    s: '',  label: 'Major Projects' },
-              { n: '8.34', s: '',  label: 'CGPA at LPU' },
+              { n: '9.3', s: '',  label: 'CGPA at LPU' },
               { n: '350+',    s: '+', label: 'Leetcode Problems Solved' },
               { n: '5+',    s: '',  label: 'Certifications' },
             ].map((st, i) => (

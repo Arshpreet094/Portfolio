@@ -1,11 +1,9 @@
 import { useReveal } from '../hooks/useReveal'
 
 const GROUPS = [
-  { id:'lang',  title:'Languages',    items:['C++','JavaScript','TypeScript','Python','Kotlin','C'],                          dot:'#F59E0B' },
-  { id:'fe',    title:'Frontend',     items:['React.js','Next.js','React Native','Tailwind CSS','HTML5','CSS3','Jetpack Compose'], dot:'#38BDF8' },
-  { id:'be',    title:'Backend',      items:['Node.js','Express.js','WebSockets','REST APIs','WebRTC'],                       dot:'#34D399' },
-  { id:'db',    title:'Databases',    items:['PostgreSQL','MongoDB','Prisma ORM','Redis'],                                    dot:'#A78BFA' },
-  { id:'tools', title:'Tools & DevOps', items:['Git','GitHub','Docker','Turborepo','CI/CD Pipelines','Postman','Clerk Auth','Cloudinary'], dot:'#FB7185', wide:true },
+  { id:'lang',  title:'Languages',    items:['C++','Java','SQL','Python','HTML','CSS','Javascript','C','React'],                          dot:'#F59E0B' },
+  { id:'DS',    title:'Data Science and ML',     items:['MS Excel','Power BI','Numpy','Pandas','Matplotlib','Seaborn','SkiKit-Learn'], dot:'#38BDF8' },
+  { id:'tools', title:'Tools & DevOps', items:['Git','GitHub','MS Excel','Power BI','CI/CD Pipelines'], dot:'#FB7185', wide:true },
 ]
 const CERTS = [
   { name:'Cloud Computing', org:'NPTEL', date:'Nov 2025', dot:'#38BDF8' },
@@ -16,6 +14,8 @@ const CERTS = [
 
 function SkillCard({ g, delay }) {
   const ref = useReveal('sr-sc', delay)
+  const softRef = useReveal('sr', 280)
+
 
   return (
     <div ref={ref} className={`sr-sc border border-white/[0.08] rounded-2xl p-6 md:p-7 bg-[#1A1A1A]
@@ -37,6 +37,8 @@ function SkillCard({ g, delay }) {
           </span>
         ))}
       </div>
+      
+
     </div>
   )
 }
@@ -59,7 +61,6 @@ function CertCard({ c, delay }) {
 
 export default function Skills() {
   const hRef = useReveal('sr', 0)
-  const softRef = useReveal('sr', 280)
 
   return (
     <section id="skills" className="py-24 md:py-32 bg-[#111111]">
@@ -84,20 +85,7 @@ export default function Skills() {
             {CERTS.map((c, i) => <CertCard key={c.name} c={c} delay={300 + i * 80} />)}
           </div>
         </div>
-        <div ref={softRef} className="sr">
-              <br>
-              </br>
-              <h3 className="font-serif italic font-bold text-xl text-[#F0EBE3] mb-4">Soft Skills</h3>
-              <div className="flex flex-wrap gap-2.5">
-                {['Problem-Solving','Team Collaboration','Fast Learner','Attention to Detail'].map(s=>(
-                  <span key={s} className="text-sm font-medium px-4 py-2 rounded-lg border border-white/[0.09]
-                    text-[#8A8178] hover:text-[#F0EBE3] hover:border-[#C8A84B]/30 hover:bg-[#C8A84B]/[0.05]
-                    bg-white/[0.03] transition-all duration-200 cursor-default">
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </div>
+        
       </div>
     </section>
   )

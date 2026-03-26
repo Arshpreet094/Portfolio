@@ -86,10 +86,10 @@ export default function Contact() {
 
             <div className="flex flex-col gap-3">
               {[
-                { label: 'Email',    val: 'gauravkumar170303@gmail.com', href: 'mailto:gauravkumar170303@gmail.com' },
-                { label: 'LinkedIn', val: 'in/gauravkumar170303',        href: 'https://www.linkedin.com/in/gauravkumar170303' },
-                { label: 'GitHub',   val: 'GauravKumar17',               href: 'https://github.com/GauravKumar17' },
-                { label: 'Phone',    val: '+91 7319814361',              href: 'tel:+917319814361' },
+                { label: 'Email',    val: 'singharshpreet9460@gmail.com', href: 'mailto:singharshpreet9460@gmail.com' },
+                { label: 'LinkedIn', val: 'in/Arshpreet094',        href: 'https://www.linkedin.com/in/Arshpreet094' },
+                { label: 'GitHub',   val: 'Arshpreet094',               href: 'https://github.com/arshpreet094' },
+                { label: 'Phone',    val: '+91 7508353653',              href: 'tel:+917508353653' },
               ].map(c => (
                 <a key={c.label} href={c.href}
                   target={c.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer"
@@ -136,7 +136,7 @@ export default function Contact() {
               )}
               {status === 'err' && (
                 <p className="text-red-400 text-sm text-center">
-                  Something went wrong. Email me at <a href="mailto:gauravkumar170303@gmail.com" className="underline">gauravkumar170303@gmail.com</a>
+                  Something went wrong. Email me at <a href="mailto:singharshpreet9460@gmail.com" className="underline">singharshpreet9460@gmail.com</a>
                 </p>
               )}
             </form>
